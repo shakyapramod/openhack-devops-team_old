@@ -19,4 +19,8 @@ jobs:
         dotnet-version: 2.0
     - name: Install dependencies
       run: dotnet restore ./apis/poi/web/poi.csproj
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
     
