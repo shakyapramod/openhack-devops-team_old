@@ -9,8 +9,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using poi.Utility;
 
-dfgfd
-
 namespace poi
 {
     public class Program
