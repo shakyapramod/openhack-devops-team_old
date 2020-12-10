@@ -16,7 +16,7 @@ COPY ./apis/poi/web/appsettings.*.json /app/out/
 COPY ./apis/poi/web/appsettings.json /app/out/
 
 FROM build-env AS unit-test
-WORKDIR /app/tests/UnitTests
+WORKDIR ./app/tests/UnitTests
 RUN dotnet test
 
 # build runtime image
