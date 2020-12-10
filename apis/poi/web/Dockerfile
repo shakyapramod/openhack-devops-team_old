@@ -2,7 +2,8 @@ FROM microsoft/dotnet:2.1-sdk AS build-env
 WORKDIR /app
 
 # copy csproj and restore as distinct layers
-COPY *.csproj ./
+COPY *.csproj ./apis/poi/web
+
 RUN dotnet restore
 
 # copy everything else and build
