@@ -1,18 +1,22 @@
 name: .NET Core
 
 on:
-  push:   
-    branches: [ master ]
-    paths-ignore: 
-    - '/apis/trips/**'
-    - '/apis/user-java**'
-    - 'apis/userprofile/**'
   pull_request:
-    branches: [ master ]
-    paths-ignore: 
-    - '/apis/trips/**'
-    - '/apis/user-java**'
-    - 'apis/userprofile/**'
+    branches: [master]
+
+#on:
+ # push:   
+ #   branches: [ master ]
+ #   paths-ignore: 
+ #   - '/apis/trips/**'
+ #   - '/apis/user-java**'
+ #   - 'apis/userprofile/**'
+ # pull_request:
+ #   branches: [ master ]
+ #   paths-ignore: 
+ #   - '/apis/trips/**'
+ #   - '/apis/user-java**'
+ #   - 'apis/userprofile/**'
 
 jobs:
   build:
