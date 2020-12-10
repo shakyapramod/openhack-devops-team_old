@@ -4,7 +4,7 @@ WORKDIR /app
 # copy csproj and restore as distinct layers
 COPY  ./apis/poi/web/*.csproj ./
 
-#COPY ./apis/poi/tests/IntegrationTests/*.csproj ./tests/IntegrationTests/
+COPY ./apis/poi/tests/IntegrationTests/*.csproj ./tests/IntegrationTests/
 COPY ./apis/poi/tests/UnitTests/*.csproj ./tests/UnitTests/
 
 RUN dotnet restore
@@ -23,9 +23,9 @@ RUN dotnet test
 FROM microsoft/dotnet:2.1-aspnetcore-runtime
 WORKDIR /app
 
-ENV SQL_USER="YourUserName" \
-SQL_PASSWORD="changeme" \
-SQL_SERVER="changeme.database.windows.net" \
+ENV SQL_USER="demousersa" \
+SQL_PASSWORD="demo@pass123" \
+SQL_SERVER="openhackwpn4z9r3sql.database.windows.net" \
 SQL_DBNAME="mydrivingDB" \
 WEB_PORT="8080" \
 WEB_SERVER_BASE_URI="http://0.0.0.0" \
